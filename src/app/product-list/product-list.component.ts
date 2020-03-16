@@ -16,8 +16,11 @@ export class ProductListComponent implements OnInit {
     this.productDetailsService.getProducts()
     .subscribe(data => {
       this.productsData = data;
-    }
-      );
-  }
+      console.log(this.productDetailsService
+        .getFilteredProducts(this.productsData, 'fruits'));
+
+    });
+
+      }
 
 }

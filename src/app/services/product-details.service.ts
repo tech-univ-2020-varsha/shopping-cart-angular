@@ -12,14 +12,14 @@ import {Product} from '../shared/Product';
 export class ProductDetailsService {
   constructor(private http: HttpClient) { }
     API_URL = PRODUCTS_URL;
-Product;
   getProducts = (): Observable<any> => {
     return this.http.get(this.API_URL);
   }
 
   getFilteredProducts = (data: Product[], filterType: string, )
                          : Product[]  => {
-    return filterProducts(data, filterType );
+                           const groupedProducts = filterProducts(data, 'category' );
+                           return groupedProducts[filterType];
 
   }
 

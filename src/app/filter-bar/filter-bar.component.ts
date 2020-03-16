@@ -6,7 +6,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FilterBarComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private productDetailsService: ProductDetailsService
+
+  ) { }
 
   ngOnInit(): void {
   }
