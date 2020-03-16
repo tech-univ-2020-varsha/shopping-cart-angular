@@ -9,12 +9,14 @@ import { FilterBarComponent } from './filter-bar/filter-bar.component';
 import {ProductDetailsService} from './services/product-details.service';
 import { HttpClientModule } from '@angular/common/http';
 import { ProductListComponent } from './product-list/product-list.component';
+import { ProductCardComponent } from './product-card/product-card.component';
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FilterBarComponent,
-    ProductListComponent
+    ProductListComponent,
+    ProductCardComponent
   ],
   imports: [
     BrowserModule,

@@ -2,16 +2,28 @@
     <div class="filter-cat-heading">
         Filter categories
     </div>
-    <div class="filter-items not-selected-filter left-border-radius">
+    <div 
+    class="filter-items 
+        not-selected-filter 
+        left-border-radius"
+        [ngClass]="{
+            'selected-filter':selectedItem==='All'
+        }"
+        (click)="clickFilter('All')"
+        >
         All
     </div>
-    <div class="filter-items not-selected-filter">
-        Fruits
-    </div>
-    <div class="filter-items not-selected-filter">
-        Dairy
-    </div>
-    <div  class="filter-items not-selected-filter rightBorderRadius">
-        Household
-    </div>
+    <div 
+    *ngFor="let filter of filterTypes; let i = index let last = last"
+    class="filter-items not-selected-filter rightBorderRadius "
+    (click)="clickFilter(filter)"
+    [ngClass]="{
+        'selected-filter':selectedItem===filter,
+        'rightBorderRadius':last===true
+    }"
+    >
+        {{filter}}
+    </div> 
 </div>
+<app-product-list [productsData]="productsToDisplay"></app-product-list>
+

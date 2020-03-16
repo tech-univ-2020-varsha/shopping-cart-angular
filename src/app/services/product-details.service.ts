@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Observable, throwError } from 'rxjs';
-import { catchError } from 'rxjs/operators';
-import { HttpClient, HttpHeaders, HttpErrorResponse } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import {PRODUCTS_URL} from '../constants/url';
 import {filterProducts} from '../shared/filterProducts';
 import {Product} from '../shared/Product';
@@ -20,6 +19,11 @@ export class ProductDetailsService {
                          : Product[]  => {
                            const groupedProducts = filterProducts(data, 'category' );
                            return groupedProducts[filterType];
+
+  }
+
+  getFilterTypes = (data: Product[]) => {
+   return Object.keys(filterProducts(data, 'category' ));
 
   }
 

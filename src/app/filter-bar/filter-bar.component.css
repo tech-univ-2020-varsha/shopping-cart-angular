@@ -18,11 +18,15 @@ margin-top: 1em;
 
 .filter-items{
     padding: 1em 2em 1em 2em;
+    cursor: pointer;
 }
 .not-selected-filter{
     background: rgb(196,196,196);
 }
 
+.selected-filter{
+    background: rgb(238,238,238);
+}
 
 @media(max-width: 600px) {
     .filter-cat-heading {

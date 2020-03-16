@@ -1,0 +1,21 @@
+<div class="itemImage">
+    <img src={{product.imageLink}} alt="product image"  class="image">
+</div>
+<div>
+    {{product.name}}
+</div>
+<div>
+MRP {{product.price}} /-
+</div>
+
+<div class="countContainer" >
+    <div class="counterItems">
+      <button  class="counterbuttons" (click)="decrement()">-</button>
+    </div>
+    <div>
+     {{count}}
+    </div>
+    <div class="counterItems">
+        <button class="counterbuttons" (click)="increment()">+</button>
+    </div>
+  </div>
