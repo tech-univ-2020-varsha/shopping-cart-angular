@@ -10,13 +10,16 @@ import {ProductDetailsService} from './services/product-details.service';
 import { HttpClientModule } from '@angular/common/http';
 import { ProductListComponent } from './product-list/product-list.component';
 import { ProductCardComponent } from './product-card/product-card.component';
+import { CartDetailService } from './services/cart-service.service';
+import { CartPageComponent } from './cart-page/cart-page.component';
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FilterBarComponent,
     ProductListComponent,
-    ProductCardComponent
+    ProductCardComponent,
+    CartPageComponent
   ],
   imports: [
     BrowserModule,
@@ -24,7 +27,10 @@ import { ProductCardComponent } from './product-card/product-card.component';
     FontAwesomeModule,
     HttpClientModule
   ],
-  providers: [ProductDetailsService],
+  providers: [
+    ProductDetailsService,
+    CartDetailService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

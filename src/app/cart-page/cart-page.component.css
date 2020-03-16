@@ -1,0 +1,143 @@
+.checkoutContainer{
+    display: flex;
+    flex-direction: column;
+    margin-top: 5em;
+}
+
+.heading{
+    margin-left: 3em;
+    margin-top: 1em;
+    font-size: 2em;
+}
+
+/* table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 2em;
+  }
+  table{
+      border-radius: 10px;
+      box-shadow: 1px 3px 5px #888888;
+  } */
+  .tableContainer{
+      display: flex;
+    margin-left: 5em;
+   margin-top: 2em;
+   width: 70%;
+  overflow-x:auto;
+  }
+
+
+  .categoryHeading{
+      background: rgb(196,196,196);
+      padding: 1em;
+  }
+
+  table { 
+    border: 1px solid #000;
+    border-collapse: separate;
+    border-left: 0;
+    border-radius: 8px;
+    border-spacing: 0px;
+    box-shadow: 0px 0px 6px #888888;
+}
+thead {
+    display: table-header-group;
+    vertical-align: middle;
+    border-color: inherit;
+    border-collapse: separate;
+}
+tr {
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+}
+th, td {
+    padding: 5px 4px 6px 4px; 
+    text-align: left;
+    vertical-align: top;
+    border-left: 1px solid #000; 
+    padding: 2em;   
+}
+td {
+    border-top: 1px solid #000;    
+}
+thead:first-child tr:first-child th:first-child, tbody:first-child tr:first-child td:first-child {
+    border-radius: 8px 0 0 0;
+}
+thead:last-child tr:last-child th:first-child, tbody:last-child tr:last-child td:first-child {
+    border-radius: 0 0 0 8px;
+}
+
+.summaryCard{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    margin-right: 8em;
+}
+
+.cartSummary{
+    display: flex;
+    margin-right: 4em;
+}
+
+@media(max-width: 1000px) {
+    .cartSummary {
+      flex-direction: column;
+     }
+     .summaryCard{
+         width: 80%;
+     }
+  }
+
+
+
+
+ 
+  @media(max-width: 300px)   {
+
+	
+	table, thead, tbody, th, td, tr { 
+		display: block; 
+	}
+	
+	
+	thead tr { 
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+	
+	tr { border: 1px solid #ccc; }
+	
+	td { 
+		/* Behave  like a "row" */
+		border: none;
+		border-bottom: 1px solid #eee; 
+		position: relative;
+		padding-left: 50%; 
+	}
+	
+	td:before { 
+		/* Now like a table header */
+		position: absolute;
+		/* Top/left values mimic padding */
+		top: 6px;
+		left: 6px;
+		width: 100%; 
+		padding-right: 10px; 
+		white-space: nowrap;
+    }
+}
+
+.continueShoppingBtn{
+   margin:2em;
+   padding: 1em 2em 1em 2em;
+    border-radius: 10px;
+    background: rgb(238,195,92);
+    box-shadow: 0px 0px 6px #888888;
+    font-size: 1em;
+    outline: none;
+    border: none;
+    margin-left: 4em;
+}

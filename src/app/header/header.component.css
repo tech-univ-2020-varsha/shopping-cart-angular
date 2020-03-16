@@ -10,4 +10,6 @@
     right: 0;
     margin-right: 2em;
     align-self: flex-end;
+    outline: none;
+    cursor: pointer;
 }
