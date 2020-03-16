@@ -1,0 +1,60 @@
+.filter-container{
+display: flex;
+font-size: 1rem;
+margin-top: 1em;
+}
+
+.left-border-radius{
+    border-radius: 10px 0px 0px 10px;
+}
+
+.filter-cat-heading{
+    padding: 1em 2em 1em 2em;
+}
+
+.rightBorderRadius{
+    border-radius: 0px 10px 10px 0px;  
+}
+
+.filter-items{
+    padding: 1em 2em 1em 2em;
+}
+.not-selected-filter{
+    background: rgb(196,196,196);
+}
+
+
+@media(max-width: 600px) {
+    .filter-cat-heading {
+        padding:0.5em 1em 0.5em 1em;
+     }
+     .filter-items{
+       padding: 0.5em 1em 0.5em 1em;
+       
+       }
+  }
+
+
+  @media(max-width: 450px) {
+    .filter-cat-heading {
+        padding: 0.2em 0.4em 0.2em 0.4em;
+     }
+     .filter-items{
+       padding: 0.2em 0.4em 0.2em 0.4em;
+       
+       }
+  }
+
+
+  
+@media(max-width: 300px) {
+    .filter-cat-heading {
+        padding: 0.15em 0.3em 0.15em 0.3em;
+     }
+     .filter-items{
+       padding: 0.15em 0.3em 0.15em 0.3em;
+       
+       }
+  }
+
+
