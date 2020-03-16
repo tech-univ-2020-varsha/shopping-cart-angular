@@ -1,0 +1,19 @@
+<div>
+    <div class="products">
+        <div class="product-list-container">
+   <div *ngFor="let product of productsData; let i = index" class="product-container">
+     <div class="item-card">
+            <div class="itemImage">
+                <img src={{product.imageLink}} alt="product image"  class="image">
+            </div>
+            <div>
+                {{product.name}}
+            </div>
+            <div>
+           MRP {{product.price}} /-
+            </div>
+        </div>
+       </div>
+   </div> 
+</div>
+</div>
